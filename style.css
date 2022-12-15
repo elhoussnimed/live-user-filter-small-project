@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    text-transform: capitalize;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.search-bar {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 35%;
+}
+
+.search-bar h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.search-bar p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    opacity: .8;
+}
+
+.search-bar>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.search-bar>div .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.search-bar>div .checkmark i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 15px;
+    display: none;
+}
+
+.search-bar>div .checkmark.active {
+    background-color: #4caf50;
+}
+
+.search-bar>div .checkmark.active i {
+    display: block;
+}
+
+.search-bar>div label {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.search-bar .search-input {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #00000020;
+    color: white;
+}
+
+.search-bar .search-input::placeholder {
+    color: rgb(134, 134, 134);
+}
+
+.users {
+    padding: 10px;
+    height: 65%;
+    overflow-y: scroll;
+}
+
+.users .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.users .user:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.users .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.users .user .user-name {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.users .user .user-location {
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+.errorMsg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: white;
+    color: red;
+    padding: 30px;
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 3px solid red;
+    display: none;
+}
